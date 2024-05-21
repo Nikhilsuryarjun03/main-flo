@@ -1,32 +1,59 @@
+:root {
+  --background-color: #f0f8ff;  /* Light blue background */
+  --primary-color: #3498db;     /* Dark blue background */
+  --text-color: white;
+  --border-color: #ddd;         /* Gray border */
+}
+
 body {
-    background-color: #f0f8ff;  /* Light blue background */
-    font-family: sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  
-  header {
-    background-color: #3498db;  /* Dark blue background */
-    color: white;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  h1 {
-    font-size: 2em;  /* Increase heading size */
-  }
-  
+  background-color: var(--background-color);
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure body takes full height */
+}
+
+header {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2em;  /* Increase heading size */
+  margin: 0;       /* Remove default margin */
+}
+
+main {
+  padding: 20px;
+  border: 5px solid var(--border-color);
+  border-radius: 10px;
+  margin: 20px auto; /* Center content horizontally */
+  flex: 1;           /* Allow main to grow and fill available space */
+  max-width: 800px;  /* Limit the maximum width of the main content */
+}
+
+footer {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  padding: 10px;
+  text-align: center;
+  margin-top: auto;  /* Push footer to bottom */
+}
+@media (max-width: 600px) {
   main {
-    padding: 20px;
-    border: 5px solid #ddd; /* Gray border */
-    border-radius: 10px; /* Rounded corners */
-    margin: 0 auto;  /* Center content horizontally */
+      padding: 15px;
+      margin: 10px auto;
   }
-  
-  footer {
-    background-color: #3498db;  /* Dark blue background */
-    color: white;
-    padding: 10px;
-    text-align: center;
+
+  h1 {
+      font-size: 1.5em;
   }
-  
+
+  header, footer {
+      padding: 15px;
+  }
+}
