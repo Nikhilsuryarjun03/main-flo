@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My New Webpage</title>
+  <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+  <header>
+    <h1>Welcome to my Website!</h1>
+  </header>
+
+  <main>
+    <p>This is the main content of my webpage. You can add more text, images, or other elements here!</p>
+    <form id="contact-form">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+      <br>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      <br>
+      <button type="submit">Submit</button>
+    </form>
+    <script>
+      const form = document.getElementById('contact-form');
+
+      form.addEventListener('submit', (event) => {
+        event.preventDefault(); // Prevent default form submission
+
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+
+        // Basic validation (more can be added)
+        if (name === '' || email === '') {
+          alert('Please fill in all fields.');
+          return;
+        }
+
+        // Sanitize email to prevent XSS (basic example)
+        const sanitizedEmail = email.replace(/<[^>]*>/g, ''); // Remove HTML tags
+
+        // Further processing (e.g., display message)
+        console.log(`Name: ${name}, Email: ${sanitizedEmail}`);
+        alert('Form submitted successfully!');
+      });
+    </script>
+  </main>
+
+  <footer>
+    <p>Copyright © 2024</p>
+  </footer>
+</body>
+</html>
