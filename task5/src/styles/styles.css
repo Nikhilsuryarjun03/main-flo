@@ -1,0 +1,78 @@
+/* Calculator container */
+.calculator {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  margin: 0 auto;
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #282c34; /* Dark background for the calculator */
+  border-radius: 10px; /* More rounded corners for a modern look */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* More pronounced shadow for depth */
+}
+
+/* Display area */
+.display {
+  background-color: #ffffff; /* Light background for better contrast */
+  padding: 20px;
+  font-size: 24px;
+  text-align: right;
+  color: #282c34; /* Dark text for better contrast */
+  border-radius: 5px; /* Rounded corners for the display area */
+}
+
+/* Button container */
+.button-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px; /* Increased gap for better spacing */
+  margin-top: 20px; /* More space between display and buttons */
+}
+
+/* General button styles */
+.button {
+  padding: 20px; /* Larger padding for bigger buttons */
+  border: none;
+  border-radius: 10px; /* More rounded corners for buttons */
+  cursor: pointer;
+  font-size: 18px; /* Slightly larger font size */
+  background-color: #61dafb; /* Light blue background for buttons */
+  color: #282c34; /* Dark text for better contrast */
+  transition: background-color 0.3s ease-in-out; /* Smoother hover effect */
+}
+
+/* Button hover effect */
+.button:hover {
+  background-color: #21a1f1; /* Darker blue on hover */
+}
+
+/* Operation buttons (optional styles) */
+.operation {
+  background-color: #ff6347; /* Tomato red for operations */
+}
+
+.operation:hover {
+  background-color: #e5533e; /* Darker red hover for operation buttons */
+}
+
+/* Active button (optional visual cue for pressed button) */
+.button.active {
+  background-color: #ccc; /* Change color or add a border to indicate press */
+}
+
+/* Optional: Error handling (visual cue for error) */
+.display.error {
+  background-color: #f9f0f0; /* Light red for error messages */
+  color: #900; /* Darker red for error text */
+}
+
+body {
+  background-color: #1e1e1e; /* Dark background for the body */
+  color: #ffffff; /* Light text for contrast */
+  font-family: 'Arial', sans-serif; /* Font family for consistency */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
